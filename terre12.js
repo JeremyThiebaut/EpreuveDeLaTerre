@@ -1,7 +1,7 @@
 const reverseTime = () => {
   const timeSend = process.argv;
   timeSend.splice(0, 2);
-  if (timeSend.length > 1) {
+  if (timeSend.length != 1) {
     return "error";
   }
 
