@@ -16,10 +16,10 @@ const clock = () => {
   const hour = date[0];
   const suffix = hour >= 12 ? "pm" : "am";
   const minute = date[1];
-  let hours = hour % 12 || 12;
+  let newHours = hour % 12 || 12;
 
   if (hour == 12 || hour == 00) {
-    hours = 00;
+    newHours = 00;
   }
 
   if (
@@ -33,7 +33,7 @@ const clock = () => {
     return "the time entered is invalid (ex: node exo.js 13:47)";
   }
 
-  return `${hours}:${minute}${suffix}`;
+  return `${newHours}:${minute}${suffix}`;
 };
 
 console.log(clock());
