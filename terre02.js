@@ -3,7 +3,10 @@ const arguments = () => {
   arg.splice(0, 2);
   let text = "";
   arg.forEach((element) => {
-    text = text + element + "\n";
+    text = text + element;
+    if (element != arg[arg.length - 1]) {
+      text = text + "\n";
+    }
   });
   return text;
 };
