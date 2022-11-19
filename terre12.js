@@ -13,6 +13,10 @@ const reverseTime = () => {
 
   let status;
 
+  if (isNaN(Number(hours)) || isNaN(Number(hours))) {
+    return "error";
+  }
+
   if (modifier.toLowerCase() == "am" || modifier.toLowerCase() == "pm") {
     status = true;
   }

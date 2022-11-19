@@ -10,7 +10,14 @@ const findMiddle = () => {
   const middleValue = Number(value[1]);
   const lastValue = Number(value[2]);
 
-  if (isNaN(firstValue) || isNaN(middleValue) || isNaN(lastValue)) {
+  if (
+    isNaN(firstValue) ||
+    isNaN(middleValue) ||
+    isNaN(lastValue) ||
+    firstValue === lastValue ||
+    firstValue === middleValue ||
+    lastValue === middleValue
+  ) {
     return "error";
   }
 

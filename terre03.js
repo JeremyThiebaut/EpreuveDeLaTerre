@@ -32,7 +32,13 @@ const startToLetter = () => {
   const letter = process.argv;
 
   letter.splice(0, 2);
-  if (letter.length > 1 || letter[0].length > 1) {
+
+  if (
+    letter.length === 0 ||
+    letter.length > 1 ||
+    letter[0].length > 1 ||
+    !isNaN(letter[0])
+  ) {
     return "Veuillez donner seulement une lettre";
   }
 
