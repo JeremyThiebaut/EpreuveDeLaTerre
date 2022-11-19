@@ -34,7 +34,6 @@ const alphabet = () => {
     text = text + letter;
   });
 
-  text = text + "\n";
   return text;
 };
 
