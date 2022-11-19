@@ -1,12 +1,12 @@
 const integer = () => {
-  const number = process.argv;
-  number.splice(0, 2);
+  const nbr = process.argv;
+  nbr.splice(0, 2);
 
-  if (number.length != 1 || isNaN(number[0])) {
+  if (nbr.length != 1 || isNaN(nbr[0])) {
     return "Tu ne me la mettras pas à l'envers";
   }
 
-  if (number % 2 == 0) {
+  if (nbr % 2 == 0) {
     return "pair";
   } else {
     return "impair";
